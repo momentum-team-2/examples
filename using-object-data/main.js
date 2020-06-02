@@ -1,4 +1,4 @@
-/* eslint-disable prefer-const, no-unused-vars, quotes */
+/* eslint-disable prefer-const, no-unused-vars */
 
 /* DATA */
 const menuItems = [
@@ -22,19 +22,30 @@ const menuItems = [
 
 // insert a <li> for each item on the menu. For each list item, we want to show the title and the image.
 
-let menu = document.querySelector(".menu-items") // this is the ul
+let menu = document.querySelector('.menu-items') // this is the ul
 
 function renderPageContent () {
   for (let item of menuItems) {
-    let li = document.createElement("li")
-    li.classList.add("menu-list-item")
-    let titleEl = document.createElement("h3")
-    let itemTitle = document.createTextNode(item.title)
-    titleEl.appendChild(itemTitle)
-    li.appendChild(titleEl)
+    let li = document.createElement('li')
+    li.classList.add('menu-list-item')
+    // call a function to create the title element, passing in the text value of the title property in our object
+    // then we can append it all in one go here
+    li.appendChild(createTitleElement(item.title))
     menu.appendChild(li)
-    li.innerHTML += `<img src=${item.imgUrl}>`
+    // call a function to create the image element that we want to append to the li
+    li.innerHTML += createImageElement(item.imgUrl)
   }
 }
 
+function createTitleElement (title) {
+  let titleEl = document.createElement('h3')
+  titleEl.innerText = `${title}` // alternative to creating a text node and appending that to the h3
+  return titleEl
+}
+
+function createImageElement (url) {
+  return `<img src=${url}>`
+}
+
+// This function is going to run when this js file is loaded
 renderPageContent()
