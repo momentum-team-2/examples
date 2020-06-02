@@ -20,7 +20,7 @@ const menuItems = [
   }
 ]
 
-// insert a <li> for each picture and name of the items on the menu
+// insert a <li> for each item on the menu. For each list item, we want to show the title and the image.
 
 let menu = document.querySelector(".menu-items") // this is the ul
 
