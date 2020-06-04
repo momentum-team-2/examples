@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.shoelace.style/1.0.0-beta.25/shoelace.css">
+  <link rel="stylesheet" href="style.css">
+  <script src='moment.min.js' defer></script>
+  <script src='script.js' defer></script>
+  <title>Todos</title>
+</head>
+
+<body>
+  <header class='mar-md'>
+    <h1>Todos</h1>
+  </header>
+  <main class="todo-content mar-md">
+    <form id="todo-form" class="form">
+      <div class="input-field">
+        <label for="todo-input">create a new todo item</label>
+        <input type="text" id="todo-input">
+      </div>
+      <div class="input-field">
+        <button type="submit" class="button-lg button-success">Add a todo</button>
+      </div>
+    </form>
+    <section class='todos mar-t-xl'></section>
+  </main>
+</body>
+
+</html>
