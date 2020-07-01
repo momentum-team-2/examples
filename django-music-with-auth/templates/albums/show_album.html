@@ -10,6 +10,9 @@
   <p class="mt5 ml5 album_title f3 fw6 db dark-pink">{{ album.title }}</p>
   <p class="ml5 f5 gray">{{ album.artist_name }}</p>
   <p class="ml5 f5 gray">{{ album.year }}</p>
+  {% for genre in album.genres.all %}
+  <p>{{ genre }}</p>
+  {% endfor %}
 </div>
 
 {% endblock content %}

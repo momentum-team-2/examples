@@ -25,6 +25,7 @@ urlpatterns = [
     path('albums/<int:pk>', album_views.show_album, name="show_album"),
     path('albums/<int:pk>/edit', album_views.edit_album, name="edit_album"),
     path('albums/<int:pk>/delete', album_views.delete_album, name="delete_album"),
+    path('genres/<slug:slug>', album_views.show_genre, name="show_genre"),
     path('admin/', admin.site.urls),
     path('accounts/', include('registration.backends.simple.urls')),
 ]
