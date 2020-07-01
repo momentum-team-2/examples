@@ -11,7 +11,7 @@
   <p class="ml5 f5 gray">{{ album.artist_name }}</p>
   <p class="ml5 f5 gray">{{ album.year }}</p>
   {% for genre in album.genres.all %}
-  <p>{{ genre }}</p>
+  <a href= {% url 'show_genre' genre.slug %} >{{ genre }}</a>
   {% endfor %}
 </div>
 
